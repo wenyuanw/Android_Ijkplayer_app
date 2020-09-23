@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1EAEA"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:id="@+id/fl_group"
+        >
+
+        <com.example.my_ijk.widget.VideoPlayer
+            android:id="@+id/video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+        </com.example.my_ijk.widget.VideoPlayer>
+
+        <Button
+            android:id="@+id/btn_video_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/icon_back" />
+
+        <Button
+            android:id="@+id/btn_play_video"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="bottom|left"
+            android:background="@drawable/icon_play"
+            />
+        <Button
+            android:id="@+id/btn_full_video"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/icon_tofullscreen"
+            />
+
+        <TextView
+            android:id="@+id/geture_tv_BF_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="观察变化前后情况：50"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#D11818" />
+
+        <TextView
+            android:id="@+id/geture_tv_RL_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="观察左右变化情况：50"
+            android:layout_gravity="center_vertical"
+            android:textColor="#D11818" />
+
+        <TextView
+            android:id="@+id/Time_View"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="毫秒时间："
+            android:layout_gravity="center"
+            android:textColor="#FFEB3B" />
+
+        <ImageView
+            android:id="@+id/geture_tip"
+            android:layout_width="124dp"
+            android:layout_height="82dp"
+            android:layout_gravity="center"
+            android:src="@drawable/icon_sxzy" />
+
+
+    </FrameLayout>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:singleLine="true"
+            android:text="请输入url" />
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="播放/暂停" />
+
+</LinearLayout>
+
+</RelativeLayout>
